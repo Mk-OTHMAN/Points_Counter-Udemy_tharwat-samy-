@@ -5,6 +5,7 @@ void main() {
   runApp(const Home());
 }
 
+// right now thee main file is clean and clear
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
   @override
