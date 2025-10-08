@@ -1,4 +1,4 @@
-import 'package:basketball_counter_app/points_counter.dart';
+import 'package:basketball_counter_app/points_counter_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
