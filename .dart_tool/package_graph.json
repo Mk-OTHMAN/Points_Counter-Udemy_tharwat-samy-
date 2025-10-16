@@ -9,7 +9,8 @@
       "dependencies": [
         "bloc",
         "cupertino_icons",
-        "flutter"
+        "flutter",
+        "flutter_bloc"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -39,6 +40,15 @@
       "version": "1.0.4",
       "dependencies": [
         "lints"
+      ]
+    },
+    {
+      "name": "flutter_bloc",
+      "version": "9.1.1",
+      "dependencies": [
+        "bloc",
+        "flutter",
+        "provider"
       ]
     },
     {
@@ -232,6 +242,22 @@
       "name": "vm_service",
       "version": "14.2.1",
       "dependencies": []
+    },
+    {
+      "name": "provider",
+      "version": "6.1.5+1",
+      "dependencies": [
+        "collection",
+        "flutter",
+        "nested"
+      ]
+    },
+    {
+      "name": "nested",
+      "version": "1.0.0",
+      "dependencies": [
+        "flutter"
+      ]
     }
   ],
   "configVersion": 1

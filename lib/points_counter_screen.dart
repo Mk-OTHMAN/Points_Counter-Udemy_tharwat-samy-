@@ -18,12 +18,12 @@ class PointsCounter extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TeamWidget(teamName: 'Team A'),
+              TeamWidget(teamName: 'Team A', teameNum: 1),
               SizedBox(
                 height: 420,
                 child: VerticalDivider(color: Colors.grey, thickness: 1),
               ),
-              TeamWidget(teamName: 'Team B'),
+              TeamWidget(teamName: 'Team B', teameNum: 2),
             ],
           ),
           SizedBox(height: 32),
