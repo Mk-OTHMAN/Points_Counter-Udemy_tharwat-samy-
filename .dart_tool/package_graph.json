@@ -7,6 +7,7 @@
       "name": "basketball_counter_app",
       "version": "1.0.0+1",
       "dependencies": [
+        "awesome_dialog",
         "bloc",
         "cupertino_icons",
         "flutter",
@@ -73,6 +74,14 @@
       "version": "9.1.0",
       "dependencies": [
         "meta"
+      ]
+    },
+    {
+      "name": "awesome_dialog",
+      "version": "3.3.0",
+      "dependencies": [
+        "flutter",
+        "rive"
       ]
     },
     {
@@ -165,6 +174,15 @@
       "dependencies": []
     },
     {
+      "name": "provider",
+      "version": "6.1.5+1",
+      "dependencies": [
+        "collection",
+        "flutter",
+        "nested"
+      ]
+    },
+    {
       "name": "sky_engine",
       "version": "0.0.0",
       "dependencies": []
@@ -180,6 +198,16 @@
       "name": "characters",
       "version": "1.4.0",
       "dependencies": []
+    },
+    {
+      "name": "rive",
+      "version": "0.14.0-dev.10",
+      "dependencies": [
+        "flutter",
+        "flutter_web_plugins",
+        "meta",
+        "rive_native"
+      ]
     },
     {
       "name": "async",
@@ -239,24 +267,95 @@
       ]
     },
     {
+      "name": "nested",
+      "version": "1.0.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "rive_native",
+      "version": "0.0.13",
+      "dependencies": [
+        "args",
+        "ffi",
+        "flutter",
+        "flutter_web_plugins",
+        "graphs",
+        "http",
+        "meta",
+        "path",
+        "plugin_platform_interface",
+        "vector_math",
+        "web"
+      ]
+    },
+    {
+      "name": "flutter_web_plugins",
+      "version": "0.0.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
       "name": "vm_service",
       "version": "14.2.1",
       "dependencies": []
     },
     {
-      "name": "provider",
-      "version": "6.1.5+1",
+      "name": "http",
+      "version": "1.5.0",
       "dependencies": [
-        "collection",
-        "flutter",
-        "nested"
+        "async",
+        "http_parser",
+        "meta",
+        "web"
       ]
     },
     {
-      "name": "nested",
-      "version": "1.0.0",
+      "name": "args",
+      "version": "2.7.0",
+      "dependencies": []
+    },
+    {
+      "name": "graphs",
+      "version": "2.3.2",
       "dependencies": [
-        "flutter"
+        "collection"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
+      "name": "ffi",
+      "version": "2.1.4",
+      "dependencies": []
+    },
+    {
+      "name": "http_parser",
+      "version": "4.1.2",
+      "dependencies": [
+        "collection",
+        "source_span",
+        "string_scanner",
+        "typed_data"
+      ]
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "dependencies": [
+        "collection"
       ]
     }
   ],

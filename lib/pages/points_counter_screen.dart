@@ -1,5 +1,5 @@
-import 'package:basketball_counter_app/reset_button.dart';
-import 'package:basketball_counter_app/team_widget.dart';
+import 'package:basketball_counter_app/widgets/reset_button.dart';
+import 'package:basketball_counter_app/pages/teame_screen/team_screen.dart';
 import 'package:flutter/material.dart';
 
 class PointsCounter extends StatelessWidget {

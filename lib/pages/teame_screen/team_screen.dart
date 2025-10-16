@@ -1,5 +1,5 @@
-import 'package:basketball_counter_app/cubit/points_cubit.dart';
-import 'package:basketball_counter_app/cubit/points_state.dart';
+import 'package:basketball_counter_app/pages/teame_screen/cubit/points_cubit.dart';
+import 'package:basketball_counter_app/pages/teame_screen/cubit/points_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,20 +14,9 @@ class TeamWidget extends StatelessWidget {
       listener: (context, state) {
         PointsCubit pointsCubit = context.read<PointsCubit>();
         if (state is AddPointsState && teameNum == 1) {
-          showDialog(
-              context: context,
-              builder: (_) => const AlertDialog(
-                    title: Text('WELL DONE 💪🏼 🥳'),
-                    content: Text('Congratulations on scoring!'),
-                    backgroundColor: Colors.greenAccent,
-                  ));
+          pointsCubit.awesomeDialog(context: context);
         } else if (state is AddPointsState && teameNum == 2) {
-          showDialog(
-              context: context,
-              builder: (_) => const AlertDialog(
-                    title: Text('WELL DONE'),
-                    content: Text('Congratulations on scoring!'),
-                  ));
+          pointsCubit.awesomeDialog(context: context);
         } else if (state is ResetPointsState) {
           pointsCubit.pointValue1 = pointsCubit.pointValue2 = 0;
         }
