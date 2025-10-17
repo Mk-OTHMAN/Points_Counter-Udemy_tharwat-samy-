@@ -1,7 +1,6 @@
-import 'package:basketball_counter_app/pages/teame_screen/cubit/points_cubit.dart';
-import 'package:basketball_counter_app/pages/teame_screen/cubit/points_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:points_counter/pages/teame_screen/cubit/points_cubit.dart';
 
 class ResetButton extends StatelessWidget {
   const ResetButton({Key? key}) : super(key: key);

@@ -5,3 +5,5 @@ class PointsInitial extends PointsState {}
 class AddPointsState extends PointsState {}
 
 class ResetPointsState extends PointsState {}
+
+class ImageSelectedState extends PointsState {}

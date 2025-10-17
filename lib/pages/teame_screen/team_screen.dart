@@ -1,7 +1,9 @@
-import 'package:basketball_counter_app/pages/teame_screen/cubit/points_cubit.dart';
-import 'package:basketball_counter_app/pages/teame_screen/cubit/points_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:points_counter/pages/teame_screen/cubit/points_cubit.dart';
+import 'package:points_counter/pages/teame_screen/cubit/points_state.dart';
+import 'package:points_counter/widgets/pickable_avatar.dart';
+import 'package:points_counter/widgets/show_dialog.dart';
 
 class TeamWidget extends StatelessWidget {
   final String teamName;
@@ -14,9 +16,7 @@ class TeamWidget extends StatelessWidget {
       listener: (context, state) {
         PointsCubit pointsCubit = context.read<PointsCubit>();
         if (state is AddPointsState && teameNum == 1) {
-          pointsCubit.awesomeDialog(context: context);
         } else if (state is AddPointsState && teameNum == 2) {
-          pointsCubit.awesomeDialog(context: context);
         } else if (state is ResetPointsState) {
           pointsCubit.pointValue1 = pointsCubit.pointValue2 = 0;
         }
@@ -26,6 +26,14 @@ class TeamWidget extends StatelessWidget {
 
         return Column(
           children: [
+            AvatarWidget(
+                onTap: () {
+                  pointsCubit.pickImageForCharacter(teameNum);
+                },
+                imageFile: teameNum == 1
+                    ? pointsCubit.character1Image
+                    : pointsCubit.character2Image,
+                radius: 60),
             Text(teamName, style: const TextStyle(fontSize: 42)),
             teameNum == 1
                 ? Text(pointsCubit.pointValue1.toString(),
@@ -40,6 +48,7 @@ class TeamWidget extends StatelessWidget {
               ),
               onPressed: () {
                 pointsCubit.addPointsTeame(teameNum, 1);
+                JDialog.showAnimatedDialog(context);
               },
               child: const Text(
                 'Add 1 Point ',
@@ -54,6 +63,7 @@ class TeamWidget extends StatelessWidget {
               ),
               onPressed: () {
                 pointsCubit.addPointsTeame(teameNum, 2);
+                JDialog.showAnimatedDialog(context);
               },
               child: const Text(
                 'Add 2 Point',
@@ -68,6 +78,7 @@ class TeamWidget extends StatelessWidget {
               ),
               onPressed: () {
                 pointsCubit.addPointsTeame(teameNum, 3);
+                JDialog.showAnimatedDialog(context);
               },
               child: const Text(
                 'Add 3 Point ',

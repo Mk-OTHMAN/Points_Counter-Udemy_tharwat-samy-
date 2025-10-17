@@ -1,13 +1,17 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:basketball_counter_app/pages/teame_screen/cubit/points_state.dart';
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
+import 'package:points_counter/helper/image_helper.dart';
+import 'package:points_counter/pages/teame_screen/cubit/points_state.dart';
 
 class PointsCubit extends Cubit<PointsState> {
   PointsCubit() : super(PointsInitial());
   int pointValue1 = 0;
   int pointValue2 = 0;
   int resetPointsValue = 0;
+  File? image;
+  File? character1Image;
+  File? character2Image;
   //----------- add points function ---------
   void addPointsTeame(int teameNum, int value) {
     if (teameNum == 1 && value == 1) {
@@ -32,22 +36,25 @@ class PointsCubit extends Cubit<PointsState> {
     emit(ResetPointsState());
   }
 
-  //----------- Awesome Dialog function ---------
-  void awesomeDialog({required BuildContext context}) {
-    AwesomeDialog(
-      context: context,
-      animType: AnimType.scale,
-      dialogType: DialogType.info,
-      body: const Center(
-        child: Text(
-          'Congratulations on scoring!',
-          style: TextStyle(fontStyle: FontStyle.italic),
-        ),
-      ),
-      title: 'Well Done',
-      desc: 'Go ahead and add more points',
-      btnOkOnPress: () {},
-    );
-    emit(AddPointsState());
+// -------- image picker function in case using only one image ---------
+  Future<void> selectImage() async {
+    final picked = await ImageHelper.pickImageFromGallery();
+    if (picked != null) {
+      image = picked;
+    }
+    emit(ImageSelectedState());
+  }
+
+// -------- image picker function in case using two images ---------
+  Future<void> pickImageForCharacter(int characterIndex) async {
+    final image = await ImageHelper.pickImageFromGallery();
+    if (image != null) {
+      if (characterIndex == 1) {
+        character1Image = image;
+      } else {
+        character2Image = image;
+      }
+    }
+    emit(ImageSelectedState());
   }
 }

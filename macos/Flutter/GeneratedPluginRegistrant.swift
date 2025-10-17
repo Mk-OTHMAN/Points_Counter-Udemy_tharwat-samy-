@@ -5,8 +5,10 @@
 import FlutterMacOS
 import Foundation
 
-import rive_native
+import file_selector_macos
+import rive_common
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-  RiveNativePlugin.register(with: registry.registrar(forPlugin: "RiveNativePlugin"))
+  FileSelectorPlugin.register(with: registry.registrar(forPlugin: "FileSelectorPlugin"))
+  RivePlugin.register(with: registry.registrar(forPlugin: "RivePlugin"))
 }

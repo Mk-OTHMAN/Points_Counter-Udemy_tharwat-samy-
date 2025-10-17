@@ -1,17 +1,18 @@
 {
   "roots": [
-    "basketball_counter_app"
+    "points_counter"
   ],
   "packages": [
     {
-      "name": "basketball_counter_app",
+      "name": "points_counter",
       "version": "1.0.0+1",
       "dependencies": [
-        "awesome_dialog",
         "bloc",
         "cupertino_icons",
         "flutter",
-        "flutter_bloc"
+        "flutter_bloc",
+        "giffy_dialog",
+        "image_picker"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -41,6 +42,29 @@
       "version": "1.0.4",
       "dependencies": [
         "lints"
+      ]
+    },
+    {
+      "name": "image_picker",
+      "version": "1.2.0",
+      "dependencies": [
+        "flutter",
+        "image_picker_android",
+        "image_picker_for_web",
+        "image_picker_ios",
+        "image_picker_linux",
+        "image_picker_macos",
+        "image_picker_platform_interface",
+        "image_picker_windows"
+      ]
+    },
+    {
+      "name": "giffy_dialog",
+      "version": "2.3.0",
+      "dependencies": [
+        "flutter",
+        "lottie",
+        "rive"
       ]
     },
     {
@@ -74,14 +98,6 @@
       "version": "9.1.0",
       "dependencies": [
         "meta"
-      ]
-    },
-    {
-      "name": "awesome_dialog",
-      "version": "3.3.0",
-      "dependencies": [
-        "flutter",
-        "rive"
       ]
     },
     {
@@ -174,6 +190,98 @@
       "dependencies": []
     },
     {
+      "name": "image_picker_windows",
+      "version": "0.2.2",
+      "dependencies": [
+        "file_selector_platform_interface",
+        "file_selector_windows",
+        "flutter",
+        "image_picker_platform_interface"
+      ]
+    },
+    {
+      "name": "image_picker_platform_interface",
+      "version": "2.11.0",
+      "dependencies": [
+        "cross_file",
+        "flutter",
+        "http",
+        "plugin_platform_interface"
+      ]
+    },
+    {
+      "name": "image_picker_macos",
+      "version": "0.2.2",
+      "dependencies": [
+        "file_selector_macos",
+        "file_selector_platform_interface",
+        "flutter",
+        "image_picker_platform_interface"
+      ]
+    },
+    {
+      "name": "image_picker_linux",
+      "version": "0.2.2",
+      "dependencies": [
+        "file_selector_linux",
+        "file_selector_platform_interface",
+        "flutter",
+        "image_picker_platform_interface"
+      ]
+    },
+    {
+      "name": "image_picker_ios",
+      "version": "0.8.13",
+      "dependencies": [
+        "flutter",
+        "image_picker_platform_interface"
+      ]
+    },
+    {
+      "name": "image_picker_for_web",
+      "version": "3.1.0",
+      "dependencies": [
+        "flutter",
+        "flutter_web_plugins",
+        "image_picker_platform_interface",
+        "mime",
+        "web"
+      ]
+    },
+    {
+      "name": "image_picker_android",
+      "version": "0.8.13+5",
+      "dependencies": [
+        "flutter",
+        "flutter_plugin_android_lifecycle",
+        "image_picker_platform_interface"
+      ]
+    },
+    {
+      "name": "lottie",
+      "version": "3.3.2",
+      "dependencies": [
+        "archive",
+        "flutter",
+        "http",
+        "path",
+        "vector_math"
+      ]
+    },
+    {
+      "name": "rive",
+      "version": "0.13.20",
+      "dependencies": [
+        "collection",
+        "flutter",
+        "flutter_web_plugins",
+        "http",
+        "meta",
+        "plugin_platform_interface",
+        "rive_common"
+      ]
+    },
+    {
       "name": "provider",
       "version": "6.1.5+1",
       "dependencies": [
@@ -198,16 +306,6 @@
       "name": "characters",
       "version": "1.4.0",
       "dependencies": []
-    },
-    {
-      "name": "rive",
-      "version": "0.14.0-dev.10",
-      "dependencies": [
-        "flutter",
-        "flutter_web_plugins",
-        "meta",
-        "rive_native"
-      ]
     },
     {
       "name": "async",
@@ -267,40 +365,30 @@
       ]
     },
     {
-      "name": "nested",
-      "version": "1.0.0",
+      "name": "file_selector_windows",
+      "version": "0.9.3+4",
       "dependencies": [
+        "cross_file",
+        "file_selector_platform_interface",
         "flutter"
       ]
     },
     {
-      "name": "rive_native",
-      "version": "0.0.13",
+      "name": "file_selector_platform_interface",
+      "version": "2.6.2",
       "dependencies": [
-        "args",
-        "ffi",
+        "cross_file",
         "flutter",
-        "flutter_web_plugins",
-        "graphs",
         "http",
-        "meta",
-        "path",
-        "plugin_platform_interface",
-        "vector_math",
-        "web"
+        "plugin_platform_interface"
       ]
     },
     {
-      "name": "flutter_web_plugins",
-      "version": "0.0.0",
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
       "dependencies": [
-        "flutter"
+        "meta"
       ]
-    },
-    {
-      "name": "vm_service",
-      "version": "14.2.1",
-      "dependencies": []
     },
     {
       "name": "http",
@@ -313,15 +401,29 @@
       ]
     },
     {
-      "name": "args",
-      "version": "2.7.0",
-      "dependencies": []
+      "name": "cross_file",
+      "version": "0.3.4+2",
+      "dependencies": [
+        "meta",
+        "web"
+      ]
     },
     {
-      "name": "graphs",
-      "version": "2.3.2",
+      "name": "file_selector_macos",
+      "version": "0.9.4+4",
       "dependencies": [
-        "collection"
+        "cross_file",
+        "file_selector_platform_interface",
+        "flutter"
+      ]
+    },
+    {
+      "name": "file_selector_linux",
+      "version": "0.9.3+2",
+      "dependencies": [
+        "cross_file",
+        "file_selector_platform_interface",
+        "flutter"
       ]
     },
     {
@@ -330,15 +432,58 @@
       "dependencies": []
     },
     {
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
+      "name": "mime",
+      "version": "2.0.0",
+      "dependencies": []
+    },
+    {
+      "name": "flutter_web_plugins",
+      "version": "0.0.0",
       "dependencies": [
-        "meta"
+        "flutter"
       ]
     },
     {
-      "name": "ffi",
-      "version": "2.1.4",
+      "name": "flutter_plugin_android_lifecycle",
+      "version": "2.0.32",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "archive",
+      "version": "4.0.7",
+      "dependencies": [
+        "crypto",
+        "path",
+        "posix"
+      ]
+    },
+    {
+      "name": "rive_common",
+      "version": "0.4.15",
+      "dependencies": [
+        "collection",
+        "ffi",
+        "flutter",
+        "flutter_web_plugins",
+        "graphs",
+        "http",
+        "meta",
+        "plugin_platform_interface",
+        "web"
+      ]
+    },
+    {
+      "name": "nested",
+      "version": "1.0.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "vm_service",
+      "version": "14.2.1",
       "dependencies": []
     },
     {
@@ -350,6 +495,34 @@
         "string_scanner",
         "typed_data"
       ]
+    },
+    {
+      "name": "posix",
+      "version": "6.0.3",
+      "dependencies": [
+        "ffi",
+        "meta",
+        "path"
+      ]
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.6",
+      "dependencies": [
+        "typed_data"
+      ]
+    },
+    {
+      "name": "graphs",
+      "version": "2.3.2",
+      "dependencies": [
+        "collection"
+      ]
+    },
+    {
+      "name": "ffi",
+      "version": "2.1.4",
+      "dependencies": []
     },
     {
       "name": "typed_data",
